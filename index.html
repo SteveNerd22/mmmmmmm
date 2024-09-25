@@ -173,20 +173,20 @@
         const content = container.querySelector('.content');
 
         // Gestisci le classi "collapsed" ed "expanded"
-        if (container.classList.contains('collapsed')) {
-            container.classList.remove('collapsed');
-            container.classList.add('expanded');
-
-            // Espandi il contenuto
-            content.style.maxHeight = 'none';
-            arrow.innerHTML = '▲';  // Cambia la freccia
-        } else {
+        if (container.classList.contains('expanded')) {
             container.classList.remove('expanded');
             container.classList.add('collapsed');
 
+            // Espandi il contenuto
+            content.style.maxHeight = '150px';
+            arrow.innerHTML = '▼';  // Cambia la freccia
+        } else {
+            container.classList.remove('collapsed');
+            container.classList.add('expanded');
+
             // Riduci il contenuto
-            content.style.maxHeight = '100px';  // Imposta la dimensione desiderata
-            arrow.innerHTML = '▼';  // Ripristina la freccia
+            content.style.maxHeight = 'none';  // Imposta la dimensione desiderata
+            arrow.innerHTML = '▲';  // Ripristina la freccia
         }
     });
 });
