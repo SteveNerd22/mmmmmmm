@@ -48,11 +48,33 @@
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                 line-height: 1.6;
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
+                overflow: hidden;
+                max-height: 100px;
             }
 
             .container:hover {
                 transform: scale(1.01);
                 box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
+
+            .container.expanded {
+                max-height: none; /* Altezza massima quando espansa (puoi modificarla) */
+            }
+
+            .toggle-arrow {
+                cursor: pointer;
+                text-align: center;
+                font-size: 1.5em;
+                margin-bottom: 10px;
+                user-select: none;
+            }
+
+            .container.collapsed .toggle-arrow {
+                transform: rotate(0deg);
+            }
+
+            .container.expanded .toggle-arrow {
+                transform: rotate(180deg); /* Ruota la freccia quando espanso */
             }
 
             .date {
@@ -131,4 +153,20 @@
             <h3 class="highlight">[inserire nome pg di frizzo]</h3>
             <h3>, verrà trasferito da un’altra parte).</h3>
         </div>
-</body></html>
+</body>
+<script>
+    document.querySelectorAll('.toggle-arrow').forEach(function(arrow) {
+        arrow.addEventListener('click', function() {
+            const container = arrow.parentElement;
+
+            if (container.classList.contains('collapsed')) {
+                container.classList.remove('collapsed');
+                container.classList.add('expanded');
+            } else {
+                container.classList.remove('expanded');
+                container.classList.add('collapsed');
+            }
+        });
+    });
+</script>
+</html>
