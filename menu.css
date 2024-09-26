@@ -25,7 +25,8 @@
   position: absolute;
   top: 20px; /* Distanza dal bordo superiore */
   left: 0px; /* Distanza dal bordo sinistro */
-  background-color: #efefef;
+  background-color: #333;
+  color: #efefef;
   padding: 10px;
   cursor: pointer;
   transform: translateX(0);
