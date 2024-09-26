@@ -17,7 +17,7 @@
   transform: translateX(-100%); /* Nasconde il menu di default */
 }
 
-.sidebar.active {
+.sidebar .active {
   transform: translateX(0); /* Mostra il menu quando attivo */
 }
 
