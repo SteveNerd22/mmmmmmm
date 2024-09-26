@@ -1,4 +1,4 @@
-.menu {
+ef.menu {
   position: fixed; /* Fissa il menu in una posizione */
   top: 0; /* Posiziona il menu in alto */
   left: 0; /* Posiziona il menu a sinistra */
@@ -24,10 +24,15 @@
 .bookmark {
   position: absolute;
   top: 20px; /* Distanza dal bordo superiore */
-  left: 10px; /* Distanza dal bordo sinistro */
-  background-color: #d9534f;
+  left: 0px; /* Distanza dal bordo sinistro */
+  background-color: #efefef;
   padding: 10px;
   cursor: pointer;
+  transform: translateX(0);
+}
+
+.bookmark .active {
+  transform: translateX(200);
 }
 
 .sidebar ul {
