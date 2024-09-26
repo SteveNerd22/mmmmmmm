@@ -80,7 +80,7 @@ blockquote {
   padding: 10px 20px;
   margin-bottom: 15px;
   text-align: center;
-  position: relative;
+  /*position: relative;*/
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-transform: uppercase;
   font-family: 'Playfair Display', serif;
