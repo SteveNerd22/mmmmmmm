@@ -38,7 +38,7 @@
 }
 
 .bookmark.active {
-  transform: translateX(200);
+  transform: translateX(200px);
 }
 
 .bookmark.active::before {
