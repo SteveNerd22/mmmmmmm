@@ -52,33 +52,34 @@
             </div>
             <div class="toggle-arrow">▼</div>
         </div>
-</body>
-<script>
-    document.querySelectorAll('.toggle-arrow').forEach(function(arrow) {
-    arrow.addEventListener('click', function() {
-        // Trova il container parent della freccia
-        const container = arrow.parentElement;
+    </body>
+    <script src="menu.js"></script>
+    <script>
+        document.querySelectorAll('.toggle-arrow').forEach(function(arrow) {
+            arrow.addEventListener('click', function() {
+                // Trova il container parent della freccia
+                const container = arrow.parentElement;
 
-        // Trova il contenuto all'interno dello stesso container
-        const content = container.querySelector('.content');
+                // Trova il contenuto all'interno dello stesso container
+                const content = container.querySelector('.content');
 
-        // Gestisci le classi "collapsed" ed "expanded"
-        if (container.classList.contains('expanded')) {
-            container.classList.remove('expanded');
-            container.classList.add('collapsed');
+                // Gestisci le classi "collapsed" ed "expanded"
+                if (container.classList.contains('expanded')) {
+                    container.classList.remove('expanded');
+                    container.classList.add('collapsed');
 
-            // Espandi il contenuto
-            content.style.maxHeight = '150px';
-            arrow.innerHTML = '▼';  // Cambia la freccia
-        } else {
-            container.classList.remove('collapsed');
-            container.classList.add('expanded');
+                    // Espandi il contenuto
+                    content.style.maxHeight = '150px';
+                    arrow.innerHTML = '▼';  // Cambia la freccia
+                } else {
+                    container.classList.remove('collapsed');
+                    container.classList.add('expanded');
 
-            // Riduci il contenuto
-            content.style.maxHeight = 'none';  // Imposta la dimensione desiderata
-            arrow.innerHTML = '▲';  // Ripristina la freccia
-        }
-    });
-});
-</script>
+                    // Riduci il contenuto
+                    content.style.maxHeight = 'none';  // Imposta la dimensione desiderata
+                    arrow.innerHTML = '▲';  // Ripristina la freccia
+                }
+            });
+        });
+    </script>
 </html>
