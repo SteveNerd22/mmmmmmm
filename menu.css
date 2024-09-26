@@ -22,7 +22,7 @@ ef.menu {
 }
 
 .bookmark {
-  position: relative;
+  position: absolute;
   top: 20px; /* Distanza dal bordo superiore */
   left: 0px; /* Distanza dal bordo sinistro */
   background-color: #efefef;
