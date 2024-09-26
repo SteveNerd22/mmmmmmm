@@ -31,8 +31,18 @@ ef.menu {
   transform: translateX(0);
 }
 
+.bookmark::before {
+  content: '▶'; /* Inserisce il simbolo come contenuto */
+  font-size: 20px; /* Dimensioni del simbolo */
+  display: inline-block;
+}
+
 .bookmark .active {
   transform: translateX(200);
+}
+
+.bookmark.active::before {
+    content: '◀'; /* Simbolo opposto per la versione attiva */
 }
 
 .sidebar ul {
